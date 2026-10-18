@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI liveScoreText;
     public int coinsToWin = 20;
+    public TextMeshProUGUI timerText;
+    public float timeLimit = 60f;
+    float timeLeft;
+    bool gameOver = false;
     public GameObject redCoinPrefab;
     public GameObject blueCoinPrefab;
     public int blueCoinCount = 50;
@@ -23,24 +27,41 @@ public class GameManager : MonoBehaviour
     bool redCoinSpawned = false; // makes sure it spawns only once
     void Awake()
     {
+        timeLeft = timeLimit;
         instance = this;
         restartPanel.SetActive(false); // hide panel at start
         redCoinScore = Random.Range(1, 11); // gives a number from 1 to 10
     }
+    void Update()
+    {
+        if (gameOver) return;
 
+        timeLeft -= Time.deltaTime;
+
+        if (timeLeft <= 0f)
+        {
+            timeLeft = 0f;
+            EndGame("Time's Up! :(");
+        }
+
+        timerText.text = "Time: " + Mathf.CeilToInt(timeLeft);
+    }
     public void CoinCollected(int score)
     {
+        if (gameOver) return;
+
+        playerScore = score;
         Debug.Log("Score: " + score);
         liveScoreText.text = "Score: " + score;
+
         if (!redCoinSpawned && score == redCoinScore)
         {
             SpawnRedCoin();
         }
+
         if (score >= coinsToWin)
         {
-            scoreText.text = "Total Score: " + score;
-            restartPanel.SetActive(true); // show panel
-            Time.timeScale = 0f;          // pause the game
+            EndGame("You Win!");
         }
     }
     void SpawnRedCoin()
@@ -78,6 +99,14 @@ public class GameManager : MonoBehaviour
     {
         bonusCollected++;
         bonusText.text = "BonusCoins: " + bonusCollected + "/" + blueCoinCount;
+    }
+    int playerScore = 0;
+    void EndGame(string message)
+    {
+        gameOver = true;
+        scoreText.text = message + "\nTotal Score: " + playerScore;
+        restartPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void RestartGame()
     {
