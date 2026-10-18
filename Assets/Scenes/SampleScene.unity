@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281874488
-  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+    rgba: 4278249471
+  m_fontColor: {r: 1, g: 0.9056399, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -421,8 +422,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.50847274, y: 0.0007730829, z: -0.00045570012, w: -0.8610776}
-  m_LocalPosition: {x: 0.01801739, y: 18.177715, z: -10.02455}
+  m_LocalRotation: {x: -0.45912394, y: 0.0018431076, z: -0.0009718626, w: -0.88836986}
+  m_LocalPosition: {x: 0.6055002, y: 14.3215065, z: -11.11817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,6 +473,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef71773895e518647b03f77a56bfdc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  target: {fileID: 420647769}
+  smoothTime: 0.2
 --- !u!1 &336474295
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +553,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 8b735daba44a51e4b852c10145823c3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -858,7 +873,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: fb0c66d27de02714f9d155f6572bb775, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1029,14 +1044,14 @@ RectTransform:
   m_GameObject: {fileID: 707479387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47674, y: 0.47674, z: 0.47674}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1004070391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: 142}
+  m_AnchoredPosition: {x: 314, y: 204}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707479389
@@ -1068,8 +1083,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281874488
-  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+    rgba: 4278714112
+  m_fontColor: {r: 0, g: 1, b: 0.02745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1092,7 +1107,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1215,14 +1230,14 @@ RectTransform:
   m_GameObject: {fileID: 898371973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47578394, y: 0.47578394, z: 0.47578394}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1004070391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131.8, y: 121.9}
+  m_AnchoredPosition: {x: -311, y: 152}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898371975
@@ -1255,7 +1270,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281874488
-  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_fontColor: {r: 0, g: 1, b: 0.027543545, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1278,7 +1293,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1448,7 +1463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1585,7 +1600,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: dd6a8748f86afb24f893ef35a1819693, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1664,8 +1679,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281874488
-  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+    rgba: 4278714112
+  m_fontColor: {r: 0, g: 1, b: 0.02745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1688,7 +1703,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1744,14 +1759,14 @@ RectTransform:
   m_GameObject: {fileID: 1326441845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.54744, y: 0.54744, z: 0.54744}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1004070391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123.8, y: 140.8}
+  m_AnchoredPosition: {x: -310.7, y: 199}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1781461102
@@ -1834,7 +1849,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: dd6a8748f86afb24f893ef35a1819693, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1974,7 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.22858453, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2079,7 +2094,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: dd6a8748f86afb24f893ef35a1819693, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2268,7 +2283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: dd6a8748f86afb24f893ef35a1819693, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2390,7 +2405,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
