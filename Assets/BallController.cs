@@ -27,5 +27,15 @@ public class BallController : MonoBehaviour
             score++;
             GameManager.instance.CoinCollected(score);
         }
+        else if (other.CompareTag("RedCoin"))
+        {
+            Destroy(other.gameObject);
+            GameManager.instance.SpawnBlueCoins(transform.position);
+        }
+        else if (other.CompareTag("BlueCoin"))
+        {
+            Destroy(other.gameObject);
+            GameManager.instance.BlueCoinCollected();
+        }
     }
 }
