@@ -16,4 +16,16 @@ public class BallController : MonoBehaviour
         float z = Input.GetAxis("Vertical");   // W and S
         rb.AddForce(new Vector3(x, 0, z) * speed);
     }
+
+    public int score = 0;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            score++;
+            GameManager.instance.CoinCollected(score);
+        }
+    }
 }
